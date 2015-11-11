@@ -1,0 +1,10 @@
+<%=Number.first.update(number: rand(100)) %>
+
+<% if @paramsnum.to_i == @number %>
+<h1>GREAT JOB</h1>
+<% elsif @paramsnum.to_i > @number %>
+<h1>Try a little lower</h1>
+<% else %><h1>Try a little higher</h1>
+<% end %>
+
+<%= @paramsnum %>
