@@ -11,11 +11,9 @@ class ParametersController < ApplicationController
     @message = nil
     @paramsnum = params[:message].to_i
     if params[:commit] == "Randomize"
-      @number = rand(100)
-    else
-      @number = Number.first[:number]
+      Number.first.update(number:rand(100))
     end
-
+    @number = Number.first[:number]
     if @paramsnum == @number
       @message = "Great Job you guessed it!"
     elsif @paramsnum > @number

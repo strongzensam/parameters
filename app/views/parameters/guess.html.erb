@@ -1,15 +1,13 @@
 <%= form_tag '/form_result', method: :post do %>
 <h1>You made a guess and it is <%= @paramsnum %> </h1>
-  <h1><%= label_tag :message, "Guess your number!" %></h1>
+  <p><%= label_tag :message, "Guess your number!" %></p>
   <%= text_field_tag :message %>
-<%= @message %>
+
 <div>
-<%= submit_tag "Guess" %>
-<% end %>
+<p><%= submit_tag "Guess" %>
+<%= submit_tag "Randomize" %>  <= To randomize the number, enter your new number and hit Randomize!</p>
+<div><h1><%= @message %></h1></div>
+
 </div>
-<%= form_tag '/form_result2', method: :post do %>
-<h1>To randomize the number, enter your new number and hit Randomize!</h1>
-  <h1><%= label_tag :message, "Guess your number!" %></h1>
-  <%= text_field_tag :message %>
-<%= submit_tag "Randomize" %>
+
 <% end %>
