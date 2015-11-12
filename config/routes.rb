@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   get '/', to: 'parameters#index'
-  get '/p', to: 'parameters#parameters'
+  get '/parameters/:guess/', to: 'parameters#parameters'
+  get '/forms/', to: 'parameters#parameters'
+  post '/form_result/', to: 'parameters#guess'
+  get '/form_result/', to: 'parameters#parameters'
+  post 'form_result2', to: 'parameters#guess'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
