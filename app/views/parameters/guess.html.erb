@@ -1,7 +1,7 @@
 <%= form_tag '/form_result', method: :post do %>
 <h1>You made a guess and it is <%= @paramsnum %> </h1>
-  <p><%= label_tag :message, "Guess your number!" %></p>
-  <%= text_field_tag :message %>
+  <p><%= label_tag :num, "Guess your number!" %></p>
+  <%= text_field_tag :num %>
 
 <div>
 <p><%= submit_tag "Guess" %>

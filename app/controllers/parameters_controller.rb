@@ -9,7 +9,7 @@ class ParametersController < ApplicationController
 
   def guess
     @message = nil
-    @paramsnum = params[:message].to_i
+    @paramsnum = params[:num].to_i
     if params[:commit] == "Randomize"
       Number.first.update(number:rand(100))
     end

@@ -1,7 +1,7 @@
 <%= form_tag '/form_result', method: :post do %>
 <div>
-  <h1><%= label_tag :message, "Guess your number!" %></h1>
-  <%= text_field_tag :message %>
+  <h1><%= label_tag :num, "Guess your number!" %></h1>
+  <%= text_field_tag :num %>
 </div>
 <div>
   <%= submit_tag "Guess" %>
